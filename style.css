@@ -1,0 +1,55 @@
+:root{
+    --fs-input: 1.5rem;
+    --gap: 2rem;
+}
+*::after,*::before, *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+body{
+    min-height: 100vh;
+    display: flex;
+}
+.wrapper{
+    margin: auto;
+    display: grid;
+    background-color: #121212;
+    height: 50vh;
+    width: 50vw;
+    border-radius: 1rem;
+    grid-template-rows: 40%  60%;
+}
+.wrapper>*{
+    overflow: hidden;
+}
+.login-text{
+    color: white;
+    font-size: calc(50vw/15);
+    margin-inline: auto;
+    grid-column: 1/-1;
+    padding-top: 2rem;
+}
+.form{
+    color: white;
+    font-size: var(--fs-input);
+}
+input{
+    height: calc(var(--fs-input)*1.25);
+    width: calc(50% - (2*var(--gap)));
+}
+.user-input{
+    border-radius: 5px;
+    border: none;
+
+}
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+}
+.user-text{
+    text-align: right;
+}
