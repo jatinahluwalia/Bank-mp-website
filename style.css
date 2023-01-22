@@ -2,11 +2,19 @@
     --fs-input: 1.5rem;
     --gap: 2rem;
 }
+@keyframes haha{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 *::after,*::before, *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans';
 
 }
 body{
@@ -14,6 +22,7 @@ body{
     display: flex;
 }
 .wrapper{
+    animation: haha 250ms;
     margin: auto;
     display: grid;
     background-color: #121212;
@@ -39,6 +48,9 @@ body{
 input{
     height: calc(var(--fs-input)*1.25);
     width: calc(50% - (2*var(--gap)));
+    border: none;
+    outline: none;
+    font-size: var(--fs-input);
 }
 .user-input{
     border-radius: 5px;
